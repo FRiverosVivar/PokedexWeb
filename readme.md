@@ -2,8 +2,8 @@
 ## Franco Riveros Vivar - 2020
 ### To-Do List
 
-- Cache Storage >[HIGH PRIORITY]
-- Better usage of Laravel
+- Cache Storage [important]
+- Better usage of Laravel [important]
 - Possible errors with CSS and HTML
 - Implement good practices with PHP
 
