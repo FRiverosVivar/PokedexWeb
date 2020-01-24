@@ -196,7 +196,29 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 mt-2">
-                                            <span><strong>Types: </strong></span>                                            
+                                            <?php
+                                                $cadenaEvolucion = Helper::getPokeData($datos->evolution_chain->url);
+                                                if(isset($cadenaEvolucion->chain->evolves_to[0])){
+                                                    if(isset($cadenaEvolucion->chain->evolves_to[0]->evolves_to[0])){
+                                                        ?>
+                                                            <span class="textDesc"><strong>
+                                                            {{$cadenaEvolucion->chain->species->name}} -> {{$cadenaEvolucion->chain->evolves_to[0]->species->name}} ->
+                                                            {{$cadenaEvolucion->chain->evolves_to[0]->evolves_to[0]->species->name}}
+                                                            </strong></span>
+                                                        <?php
+                                                    }else{
+                                                        ?>
+                                                            <span class="textDesc"><strong>
+                                                            {{$cadenaEvolucion->chain->species->name}} -> {{$cadenaEvolucion->chain->evolves_to[0]->species->name}}
+                                                            </strong></span>
+                                                        <?php
+                                                    }                                                  
+                                                }else{
+                                                ?>
+                                                    <span><strong>It has no evolutions</strong></span>
+                                                <?php
+                                                }
+                                            ?>                                         
                                         </div>
                                     </div>
                                 </div>
