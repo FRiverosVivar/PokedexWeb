@@ -2,7 +2,7 @@
 ## Franco Riveros Vivar - 2020
 
 >Link: http://18.191.158.190/test/public/home
-- Montada en AWS EC2 
+- Montada en una instancia de AWS EC2 
 
 ### To-Do List
 
